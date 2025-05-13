@@ -1,4 +1,4 @@
-\textit{Gains}: Fine-grained Federated Domain Adaptation in Open Set
+# Gains: Fine-grained Federated Domain Adaptation in Open Set
 Welcome to the repository! This is the detailed implementation of our project, Gains. We hope this code will serve as a valuable resource for understanding our work and its application. Thank you for your interest and support!
 ![img_1.png](img_1.jpg)
 ## Dependencies
