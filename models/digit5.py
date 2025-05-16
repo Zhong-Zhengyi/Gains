@@ -17,9 +17,8 @@ class CNNOurModel(nn.Module):
     def __init__(self, data_parallel=True):
         super(CNNOurModel, self).__init__()
         self.encoder = CNN(data_parallel=data_parallel)
-        # 投影矩阵
-        self.global_projector = nn.Linear(2048, 256)  # 共性特征
-        self.local_projector = nn.Linear(2048, 128)   # 个性化特征
+        self.global_projector = nn.Linear(2048, 256)
+        self.local_projector = nn.Linear(2048, 128)
         self.classifier = Classifier(data_parallel=data_parallel)
 
     def forward(self, x):
