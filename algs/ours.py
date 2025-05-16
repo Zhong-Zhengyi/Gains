@@ -161,7 +161,7 @@ class Ours(Base):
                 if len(indices) >= subset_size_per_class:
                     selected_indices.extend(torch.randperm(len(indices))[:subset_size_per_class].tolist())
                 else:
-                    raise ValueError(f"类别 {label} 的样本不足 {subset_size_per_class} 个")
+                    raise ValueError(f"Class {label} is insufficient {subset_size_per_class} ")
                 
             subset = torch.utils.data.Subset(dataset, selected_indices)
             subset_ls.append(subset)
@@ -195,7 +195,6 @@ class Ours(Base):
             n += 1
         diff_feature = diff_feature / n
 
-        # 计算新旧模型Encoder的差异
         new_c_encoder_dict = new_model.encoder.state_dict()
         new_c_classifier_dict = new_model.classifier.state_dict()
         old_encoder_dict = old_model.encoder.state_dict()
